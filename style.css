@@ -1,0 +1,328 @@
+:root {
+  --bege: #F9F6F2;
+  --marrom: #7A4B2B;
+  --dourado: #C69C6D;
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-texto: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bege);
+  color: var(--marrom);
+  font-family: var(--fonte-texto);
+}
+
+/* Cabeçalho */
+.header {
+  background-color: var(--bege);
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header .container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  color: var(--marrom);
+  letter-spacing: 2px;
+}
+
+.nav a {
+  color: var(--marrom);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--dourado);
+}
+
+/* Seção hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--bege) 60%, var(--marrom) 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: var(--marrom);
+}
+
+.hero h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #4e2f17;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--marrom);
+  color: var(--bege);
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--dourado);
+  color: var(--marrom);
+}
+
+/* Rodapé */
+.footer {
+  background-color: var(--marrom);
+  color: var(--bege);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+/* ======================
+   SEÇÃO SOBRE
+====================== */
+.sobre {
+  padding: 80px 0;
+  background-color: var(--bege);
+}
+
+.sobre-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 1 1 450px;
+}
+
+.sobre h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--marrom);
+}
+
+.sobre p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #4e2f17;
+}
+
+.assinatura {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--marrom);
+  margin-top: 20px;
+}
+
+.sobre-imagem {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* ======================
+      SEÇÃO PRODUTOS
+====================== */
+
+.produtos {
+  padding: 80px 0;
+  background-color: var(--bege);
+  text-align: center;
+}
+
+.produtos-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.produtos h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: var(--marrom);
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.produto-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.produto-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  font-family: var(--fonte-titulo);
+  color: var(--marrom);
+}
+
+.produto-card .descricao {
+  font-size: 0.95rem;
+  color: #4e2f17;
+  margin-bottom: 10px;
+}
+
+.produto-card .preco {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--marrom);
+  margin-bottom: 12px;
+}
+
+.btn-produto {
+  background-color: var(--marrom);
+  color: var(--bege);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.btn-produto:hover {
+  background-color: var(--dourado);
+  color: var(--marrom);
+}
+/* ======================
+   SEÇÃO BENEFÍCIOS
+====================== */
+.beneficios {
+  padding: 80px 0;
+  background-color: #f4efe9;
+}
+
+.beneficios-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.beneficios h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: var(--marrom);
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.beneficio-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.beneficio-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--marrom);
+}
+
+.beneficio-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4e2f17;
+}
+/* ======================
+   ANIMAÇÕES AO SCROLL
+====================== */
+
+/* Estado inicial (oculto) */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando entra na tela */
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
